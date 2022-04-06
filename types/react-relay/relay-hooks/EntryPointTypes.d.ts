@@ -226,7 +226,7 @@ export interface ThinNestedEntryPointParams<TEntryPoint>
         entryPointParams: GetEntryPointParamsFromEntryPoint<TEntryPoint>;
     }> {}
 
-export type EntryPoint<TEntryPointComponent, TEntryPointParams extends {} = {}> = InternalEntryPointRepresentation<
+export type EntryPoint<TEntryPointParams, TEntryPointComponent> = InternalEntryPointRepresentation<
     TEntryPointParams,
     TEntryPointComponent extends EntryPointComponent<infer TPreloadedQueries, any, any, any>
         ? TPreloadedQueries
